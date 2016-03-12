@@ -1,7 +1,6 @@
-// mytime0.cpp  -- implementing Time methods
+// usetime0.cpp -- программа суммирования времении
 #include <iostream>
 #include "mytime0.h"
-
 Time::Time()
 {
     hours = minutes = 0;
@@ -42,5 +41,22 @@ const Time Time::Sum(const Time & t) const
 
 void Time::Show() const
 {
-    std::cout << hours << " hours, " << minutes << " minutes";
+    std::cout << hours << " Часов, " << minutes << " минут"<<std::endl;
+    
+}
+int main()
+{
+    using std::cout;
+    using std::endl;
+     // установка первой даты
+    Time t1(3, 20);
+    // проверка правильности введения
+    t1.Show();
+      // установка второй даты
+    Time t2(4, 50);
+     // проверка правильности введения
+    t2.Show();
+
+ system("pause");
+    return 0;
 }
